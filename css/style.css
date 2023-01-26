@@ -1,0 +1,50 @@
+body {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  background: #212742;
+  color: #fff;
+}
+
+._container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
+}
+
+.nav__list {
+  max-width: 424px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 15px;
+}
+.nav__list .nav__item {
+  white-space: nowrap;
+}
+.nav__list .nav__item a {
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  height: 55px;
+  align-items: center;
+}
+.menu a {
+  white-space: nowrap;
+}
+
+.nav__phone {
+  display: flex;
+  color: #fff;
+}
+.nav__phone img {
+  width: 24px;
+  height: 24px;
+  margin-right: 11px;
+}/*# sourceMappingURL=style.css.map */
