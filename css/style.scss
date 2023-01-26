@@ -4,7 +4,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  background: #212742;
+  // background: #212742;
   color: #fff;
 }
 ._container {
@@ -13,7 +13,6 @@ body {
   padding: 0 15px;
 }
 .nav__list {
-  //   margin: 0 auto;
   max-width: 424px;
   display: flex;
   justify-content: space-between;
@@ -26,10 +25,10 @@ body {
     }
   }
 }
-.menu {
+.desktop__menu {
   display: flex;
   justify-content: space-between;
-  margin-top: 55px;
+  // margin-top: 55px;
   height: 55px;
   align-items: center;
   a {
@@ -39,9 +38,234 @@ body {
 .nav__phone {
   display: flex;
   color: #fff;
+  align-items: center;
   img {
     width: 24px;
     height: 24px;
     margin-right: 11px;
+  }
+}
+.main{
+  position: relative;
+  padding-top: 55px;
+}
+
+/* Гамбургер*/
+
+.hamburger__menu {
+  display: none;
+  z-index: 1000;
+  position: absolute;
+}
+#menu__toggle {
+  opacity: 0;
+}
+#menu__btn {
+  display: flex; /* используем flex для центрирования содержимого */
+  align-items: center; /* центрируем содержимое кнопки */
+  position: fixed;
+  top: 46px;
+  left: 15px;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+#menu__btn > span,
+#menu__btn > span::before,
+#menu__btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+}
+#menu__btn > span::before {
+  content: "";
+  top: -8px;
+}
+#menu__btn > span::after {
+  content: "";
+  top: 8px;
+}
+#menu__box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 90px 46px 15px 0;
+  list-style: none;
+  text-align: start;
+  background: #212742;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+} /* элементы меню */
+.menu__item {
+  display: block;
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-decoration: none;
+}
+#menu__box > :not(:first-child) {
+  //   margin-top: 33px;
+}
+#menu__toggle {
+  position: fixed;
+}
+#menu__toggle:checked ~ #menu__btn > span {
+  transform: rotate(45deg);
+}
+#menu__toggle:checked ~ #menu__btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu__toggle:checked ~ #menu__btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu__toggle:checked ~ #menu__box {
+  visibility: visible;
+  right: 0;
+}
+#menu__btn > span,
+#menu__btn > span::before,
+#menu__btn > span::after {
+  transition-duration: 0.25s;
+}
+#menu__box {
+  transition-duration: 0.25s;
+}
+.menu__item {
+  transition-duration: 0.25s;
+}
+/* Гамбургер окончание */
+
+@media (max-width: 829px) {
+  .main{
+    padding-top: 110px;
+  }
+  .desktop__menu {
+    display: none;
+  }
+  .hamburger__menu {
+    display: block;
+    .nav__logo {
+      padding-bottom: 5px;
+    }
+  }
+  .nav__list {
+    max-width: none;
+  }
+  .nav__item {
+    border-bottom: 1px solid#fff;
+    padding-left: 46px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 340px) {
+  .hamburger__menu {
+    display: block;
+    .nav__logo {
+      width: 100%;
+    }
+  }
+}
+.main__ibg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+._ibg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover
+}
+.main__block {
+  margin-top: 154px;
+}
+h3 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+h1 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 88px;
+  color: #ffffff;
+}
+@media (max-width: 1002px) {
+  .main__block {
+    margin-top: 0;
+    padding-top: 85px;
+  }
+  h3 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  h1 {
+    font-size: 48px;
+    line-height: 64px;
+  }
+}
+.order {
+  margin-top: 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.reserve {
+  height: 100px;
+  width: 270px;
+  text-align: center;
+  background: #3a4574;
+  color: #fff;
+  line-height: 110px;
+  margin-bottom: 25px;
+}
+.social {
+  display: flex;
+  justify-content: space-between;
+  max-width: 267px;
+  width: 100%;
+  margin-left: 15px;
+}
+.social__item {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: #fff;
+  }
+}
+@media(max-width:581px){
+  .reserve{
+    width: 100%;
+  }
+  .social{
+    max-width: none;
   }
 }
