@@ -473,7 +473,6 @@ h1 {
   text-align: center;
 }
 .swiper {
-  // width: 1170px;
   height: 100%;
 }
 .swiper-button-next,
@@ -484,13 +483,13 @@ h1 {
     color: #d3b47f;
   }
 }
-.slide__box{
+.slide__box {
   margin-left: 35px;
   margin-right: 35px;
 }
 
-@media(max-width:488px){
-  .reviews{
+@media (max-width: 488px) {
+  .reviews {
     margin-top: 4px;
     padding-top: 110px;
     padding-bottom: 110px;
@@ -498,23 +497,116 @@ h1 {
   .quotes {
     width: 53px;
     height: 38px;
-}
-  .reviews__title{
+  }
+  .reviews__title {
     font-size: 24px;
     line-height: 36px;
   }
-  .reviews__text{
+  .reviews__text {
     font-size: 12px;
     line-height: 22px;
   }
-  .reviews__signature{
+  .reviews__signature {
     padding-top: 15px;
     font-size: 16px;
     line-height: 24px;
   }
-  .swiper-button-prev, .swiper-button-next {
-    &::after{
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
       font-size: 18px;
     }
+  }
+}
+
+.food {
+  margin-top: 52px;
+  color: #000000;
+}
+h2 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 88px;
+  text-transform: uppercase;
+}
+.food__item {
+  .food__vector {
+    width: 108px;
+    border-bottom: 2px solid #d3b47f;
+    margin-left: -54px;
+    margin-bottom: 16px;
+  }
+}
+.food__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  .food__text {
+    align-self: center;
+    span {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 32px;
+      color: #808080;
+      display: block;
+      max-width: 470px;
+    }
+  }
+}
+.food__foto {
+  width: 670px;
+  height: 560px;
+}
+
+@media (max-width: 1174px) {
+  .food,
+  .food__item .food__text span {
+    color: #fff;
+  }
+  .food__item {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+  .food__text {
+    z-index: 1;
+  }
+  .food__even {
+    flex-direction: column-reverse;
+  }
+  .food__foto {
+    margin-top: -250px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+  }
+  .food__list {
+    padding: 0;
+  }
+  .food__text {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 1174px) {
+  .food__item {
+    position: relative;
+  }
+  .food__text {
+    position: absolute;
+  }
+  .food__foto {
+    margin-top: -48px;
+  }
+  .food__even {
+    .food__text {
+      top: 0;
+    }
+  }
+}
+@media (max-width: 433px) {
+  h2 {
+    font-size: 26px;
+    line-height: 39px;
   }
 }
