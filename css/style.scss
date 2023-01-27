@@ -45,7 +45,7 @@ body {
     margin-right: 11px;
   }
 }
-.main{
+.main {
   position: relative;
   padding-top: 55px;
 }
@@ -56,6 +56,7 @@ body {
   display: none;
   z-index: 1000;
   position: absolute;
+  // overflow: hidden;
 }
 #menu__toggle {
   opacity: 0;
@@ -63,9 +64,9 @@ body {
 #menu__btn {
   display: flex; /* используем flex для центрирования содержимого */
   align-items: center; /* центрируем содержимое кнопки */
-  position: fixed;
-  top: 46px;
-  left: 15px;
+  position: relative;
+  top: -64px;
+  left: 0;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -111,9 +112,7 @@ body {
   line-height: 20px;
   text-decoration: none;
 }
-#menu__box > :not(:first-child) {
-  //   margin-top: 33px;
-}
+
 #menu__toggle {
   position: fixed;
 }
@@ -145,36 +144,9 @@ body {
 }
 /* Гамбургер окончание */
 
-@media (max-width: 829px) {
-  .main{
-    padding-top: 110px;
-  }
-  .desktop__menu {
-    display: none;
-  }
-  .hamburger__menu {
-    display: block;
-    .nav__logo {
-      padding-bottom: 5px;
-    }
-  }
-  .nav__list {
-    max-width: none;
-  }
-  .nav__item {
-    border-bottom: 1px solid#fff;
-    padding-left: 46px;
-    line-height: 50px;
-  }
-}
-@media (max-width: 340px) {
-  .hamburger__menu {
-    display: block;
-    .nav__logo {
-      width: 100%;
-    }
-  }
-}
+// .nav__menu{
+//   position: relative;
+// }
 .main__ibg {
   position: absolute;
   width: 100%;
@@ -189,10 +161,11 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  object-fit: cover
+  object-fit: cover;
 }
 .main__block {
   margin-top: 154px;
+  padding-bottom: 265px;
 }
 h3 {
   font-weight: 500;
@@ -221,6 +194,39 @@ h1 {
     line-height: 64px;
   }
 }
+@media (max-width: 829px) {
+  .main__block {
+    padding-top: 30px;
+  }
+  .main {
+    padding-top: 110px;
+  }
+  .desktop__menu {
+    display: none;
+  }
+  .hamburger__menu {
+    display: block;
+    .nav__logo {
+      padding-bottom: 5px;
+    }
+  }
+  .nav__list {
+    max-width: none;
+  }
+  .nav__item {
+    border-bottom: 1px solid#fff;
+    padding-left: 46px;
+    line-height: 50px;
+  }
+}
+@media (max-width: 340px) {
+  .hamburger__menu {
+    display: block;
+    .nav__logo {
+      width: 100%;
+    }
+  }
+}
 .order {
   margin-top: 78px;
   display: flex;
@@ -235,7 +241,7 @@ h1 {
   background: #3a4574;
   color: #fff;
   line-height: 110px;
-  margin-bottom: 25px;
+  // margin-bottom: 25px;
 }
 .social {
   display: flex;
@@ -261,11 +267,254 @@ h1 {
     color: #fff;
   }
 }
-@media(max-width:581px){
-  .reserve{
+@media (max-width: 581px) {
+  .reserve {
     width: 100%;
   }
-  .social{
+  .social {
     max-width: none;
+    margin-top: 25px;
+  }
+}
+
+.dishes {
+  display: flex;
+  justify-content: space-between;
+  color: #000;
+  margin-top: 80px;
+}
+.dishes__text {
+  max-width: 468px;
+  width: 100%;
+  .day__of__week {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 20px;
+  }
+  span {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    display: flex;
+    margin-bottom: 20px;
+    position: relative;
+    align-items: center;
+  }
+}
+.dishes__item {
+  border-bottom: 1px solid #e7e7e7;
+}
+.menu__dot {
+  background: #d3b47f;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+.dish2 {
+  margin-left: 12px;
+}
+.box__dot {
+  display: flex;
+}
+
+.restaurant__foto__box {
+  max-width: 668px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  img {
+    width: 323px;
+    height: 486px;
+  }
+}
+.restaurant__foto_rectangle {
+  width: 471px;
+  height: 502px;
+  position: absolute;
+  border: 2px solid #d3b47f;
+  top: 51px;
+  left: 97px;
+  z-index: -1;
+}
+.restaurant__foto1 {
+  margin-top: 152px;
+}
+
+@media (max-width: 1179px) {
+  .dishes {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 684px) {
+  .restaurant__foto_rectangle {
+    display: none;
+  }
+  .restaurant__foto__box {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    margin-top: -670px;
+    z-index: -1;
+  }
+  .restaurant__foto1 {
+    margin-top: 0;
+    object-fit: cover;
+  }
+  .restaurant__foto2 {
+    display: none;
+  }
+  .restaurant__foto__box img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+  }
+  .dishes {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    color: #fff;
+    margin-top: 95px;
+  }
+  .dishes__text {
+    padding: 15px;
+  }
+  .dishes__text span {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 496px) {
+  .dishes__text .day__of__week {
+    font-size: 18px;
+    line-height: 27px;
+    margin-top: 8px;
+  }
+  .dishes__text span {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 8px;
+  }
+  .dish2 {
+    margin-left: 6px;
+  }
+  .menu__dot {
+    height: 3px;
+    width: 3px;
+    margin-left: 6px;
+  }
+  .restaurant__foto__box {
+    margin-top: -390px;
+    height: 478px;
+  }
+  .dishes {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 332px) {
+  .dishes__text span {
+    flex-direction: column;
+  }
+  .box__dot {
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .restaurant__foto__box {
+    margin-top: -490px;
+    z-index: -1;
+  }
+  .dishes {
+    margin-top: -3px;
+  }
+}
+
+.reviews {
+  margin-top: 90px;
+  background: #3a4574;
+  padding: 220px 0;
+}
+.reviews__box {
+  max-width: 782px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.quotes {
+  width: 83px;
+  height: 58px;
+}
+.reviews__title {
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 74px;
+  color: #d3b47f;
+  text-align: center;
+}
+.reviews__text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 40px;
+  text-align: center;
+}
+.reviews__signature {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 64px;
+  letter-spacing: 0.245em;
+  color: #d3b47f;
+  text-align: center;
+}
+.swiper {
+  // width: 1170px;
+  height: 100%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+  transition: 0.3s ease all;
+  &:hover {
+    color: #d3b47f;
+  }
+}
+.slide__box{
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+@media(max-width:488px){
+  .reviews{
+    margin-top: 4px;
+    padding-top: 110px;
+    padding-bottom: 110px;
+  }
+  .quotes {
+    width: 53px;
+    height: 38px;
+}
+  .reviews__title{
+    font-size: 24px;
+    line-height: 36px;
+  }
+  .reviews__text{
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .reviews__signature{
+    padding-top: 15px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    &::after{
+      font-size: 18px;
+    }
   }
 }

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Tzeezotje</title>
@@ -45,7 +46,8 @@
                     <li class="nav__item"><a href="#!">Lunchmenu</a></li>
                     <li class="nav__item"><a href="#!">Contact</a></li>
                     <li class="nav__item"><a href="tel:+3292825725" class=" nav__phone"><img src="./img/nav_phone.svg"
-                                alt="phone_ico">+32 9 282 57 25</a></li>
+                                alt="phone_ico">+32 9 282 57 25</a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -63,22 +65,160 @@
                     <li class="social__item"><a href="#!">Yt</a></li>
                 </ul>
             </div>
-
         </div>
-
 
         <div class="main__ibg">
             <img src="./img/ibg.jpg" alt="background" class="_ibg">
         </div>
     </section>
 
+    <section class="dishes _container">
+        <ul class="dishes__text">
+            <li class="dishes__item">
+                <p class="day__of__week">Woensdag 12/01</p>
+                <span>
+                    <div class="dish1">Salade met Serrano</div>
+                    <div class="box__dot">
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                    </div>
+                    <div class="dish2">Steak Tartaar</div>
+                </span>
+            </li>
+            <li class="dishes__item">
+                <p class="day__of__week">Donderdag 13/01</p>
+                <span>
+                    <div class="dish1">Toast Roquefort</div>
+                    <div class="box__dot">
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                    </div>
+                    <div class="dish2">Penne met Kip en Prei</div>
+                </span>
+            </li>
+            <li class="dishes__item">
+                <p class="day__of__week">Vrijdag 14/01</p>
+                <span>
+                    <div class="dish1">Verrassing van de Chef</div>
+                    <div class="box__dot">
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                    </div>
+                    <div class="dish2">Penne met Kip en Prei</div>
+                </span>
+            </li>
+            <li class="dishes__item">
+                <p class="day__of__week">Vrijdag 15/01</p>
+                <span>
+                    <div class="dish1">Verrassing van de Chef</div>
+                    <div class="box__dot">
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                    </div>
+                    <div class="dish2">Penne met Kip en Prei</div>
+                </span>
+            </li>
+            <li class="dishes__item">
+                <p class="day__of__week">Vrijdag 16/01</p>
+                <span>
+                    <div class="dish1">Verrassing van de Chef</div>
+                    <div class="box__dot">
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                        <div class="menu__dot"></div>
+                    </div>
+                    <div class="dish2">Penne met Kip en Prei</div>
+                </span>
+            </li>
+        </ul>
+        <div class="restaurant__foto__box">
+            <div class="restaurant__foto_rectangle"></div>
+            <img src="./img/restaurant_foto1.jpg" alt="Ресторан фото 1" class="restaurant__foto1">
+            <img src="./img/restaurant_foto2.jpg" alt="Ресторан фото 2" class="restaurant__foto2">
+        </div>
+    </section>
+    <section class="reviews">
+        <div class="reviews__inner _container">
 
+            <!-- Slider main container -->
+            <div class="swiper">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <div class="slide__box">
+                            <div class="reviews__box">
+                                <img src="./img/quotes.png" alt="кавычки" class="quotes">
+                                <p class="reviews__title">
+                                    Goede service, lekker eten, toffe ambiance
+                                </p>
+                                <span class="reviews__text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et
+                                    ea rebum. Stet clita kasd gubergren.
+                                </span>
+                                <p class="reviews__signature">
+                                    ALAIN HEYNDRICKX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__box">
+                            <div class="reviews__box">
+                                <img src="./img/quotes.png" alt="кавычки" class="quotes">
+                                <p class="reviews__title">
+                                    Goede service, lekker eten, toffe ambiance
+                                </p>
+                                <span class="reviews__text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et
+                                    ea rebum. Stet clita kasd gubergren.
+                                </span>
+                                <p class="reviews__signature">
+                                    ALAIN HEYNDRICKX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide__box">
+                            <div class="reviews__box">
+                                <img src="./img/quotes.png" alt="кавычки" class="quotes">
+                                <p class="reviews__title">
+                                    Goede service, lekker eten, toffe ambiance
+                                </p>
+                                <span class="reviews__text">
+                                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
+                                    et
+                                    ea rebum. Stet clita kasd gubergren.
+                                </span>
+                                <p class="reviews__signature">
+                                    ALAIN HEYNDRICKX
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-    <section class="menu _container">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
 
+        </div>
     </section>
 
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>
