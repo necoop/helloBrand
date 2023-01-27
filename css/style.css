@@ -522,6 +522,11 @@ h1 {
   margin-right: 35px;
 }
 
+@media (max-width: 684px) {
+  .reviews {
+    margin-top: 4px;
+  }
+}
 @media (max-width: 488px) {
   .reviews {
     margin-top: 4px;
@@ -621,6 +626,10 @@ h2 {
     padding: 0 15px;
   }
 }
+#food__item3 {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1174px) {
   .food__item {
     position: relative;
@@ -629,7 +638,7 @@ h2 {
     position: absolute;
   }
   .food__foto {
-    margin-top: -48px;
+    margin-top: -49px;
   }
   .food__even .food__text {
     top: 0;
@@ -639,5 +648,71 @@ h2 {
   h2 {
     font-size: 26px;
     line-height: 39px;
+  }
+}
+.foto {
+  margin-top: 80px;
+}
+.foto .swiper-slide img {
+  width: 100%;
+}
+
+.foto_outer {
+  background: #3a4574;
+}
+
+.foto__inner__text {
+  padding-bottom: 393px;
+  display: flex;
+  justify-content: space-between;
+}
+.foto__inner__text .foto__button__box {
+  position: relative;
+}
+.foto__inner__text .foto__button__box .swiper-button-prev {
+  left: -127px;
+}
+.foto__inner__text span {
+  display: block;
+  max-width: 569px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.slider__box {
+  max-width: 970px;
+  margin: -302px auto 0 auto;
+  overflow: hidden;
+}
+
+.swiper__foto {
+  position: relative;
+}
+.swiper__foto .swiper-button-prev,
+.swiper__foto .swiper-button-next {
+  position: absolute;
+}
+
+@media (max-width: 684px) {
+  .foto {
+    margin-top: 3px;
+  }
+}
+@media (max-width: 655px) {
+  .slider__box {
+    margin-top: -160px;
+  }
+  .foto__inner__text {
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 190px;
+  }
+  .foto__inner__text .foto__button__box .swiper-button-prev {
+    left: 0;
+  }
+  .swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 28px;
   }
 }/*# sourceMappingURL=style.css.map */
