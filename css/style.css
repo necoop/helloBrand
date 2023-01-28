@@ -983,4 +983,29 @@ h2 {
 
 .close:after {
   transform: rotate(-45deg);
+}
+
+.desktop__menu a {
+  position: relative;
+  color: white;
+  transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+}
+.desktop__menu a::after {
+  --scale: 0;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 3px;
+  background: linear-gradient(135deg, rgb(115, 250, 200), rgb(0, 190, 225));
+  transform: scaleX(var(--scale));
+  transform-origin: var(--x) 50%;
+  transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+}
+.desktop__menu a:hover {
+  opacity: 1;
+}
+.desktop__menu a:hover::after {
+  --scale: 1;
 }/*# sourceMappingURL=style.css.map */
