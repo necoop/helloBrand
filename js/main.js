@@ -81,6 +81,7 @@ function closeModalBySubmit(){
   modal.classList.toggle("_hidden");
 }
 
+// Ховер меню навигации
 document.querySelectorAll('.nav__descktop__item').forEach((elem) => {
 
 	elem.onmouseenter =
