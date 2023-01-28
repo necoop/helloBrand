@@ -39,13 +39,13 @@
                     <span></span>
                 </label>
                 <ul class="nav__list" id="menu__box">
-                    <li class="nav__item"><a href="#!"><img src="./img/nav_logo.png" alt="Logo" class="nav__logo"></a>
+                    <li class="nav__item nav__mobile__item"><a href="#!"><img src="./img/nav_logo.png" alt="Logo" class="nav__logo"></a>
                     </li>
-                    <li class="nav__item"><a href="#!">À la carte</a></li>
-                    <li class="nav__item"><a href="#!">Wijnkaart</a></li>
-                    <li class="nav__item"><a href="#!">Lunchmenu</a></li>
-                    <li class="nav__item"><a href="#contacts">Contact</a></li>
-                    <li class="nav__item"><a href="tel:+3292825725" class=" nav__phone"><img src="./img/nav_phone.svg"
+                    <li class="nav__item nav__mobile__item"><a href="#!">À la carte</a></li>
+                    <li class="nav__item nav__mobile__item"><a href="#!">Wijnkaart</a></li>
+                    <li class="nav__item nav__mobile__item"><a href="#!">Lunchmenu</a></li>
+                    <li class="nav__item nav__mobile__item"><a href="#contacts">Contact</a></li>
+                    <li class="nav__item nav__mobile__item"><a href="tel:+3292825725" class=" nav__phone"><img src="./img/nav_phone.svg"
                                 alt="phone_ico">+32 9 282 57 25</a>
                     </li>
                 </ul>
@@ -56,7 +56,7 @@
             <h3 class="schedule">OPEN EVERYDAY 6AM - 9PM</h3>
             <h1 class="slogan">A bad day with lunch is better than a good day without it.</h1>
             <div class="order">
-                <a href="#!" class="reserve">Reserve a table</a>
+                <a href="#!" class="reserve" id="reserve">Reserve a table</a>
                 <ul class="social">
                     <li><a href="#!" class="social__item">Fb</a></li>
                     <li><a href="#!" class="social__item">Ig</a></li>
@@ -341,7 +341,7 @@
             </ul>
         </div>
 
-        <form method="post" onsubmit="return false" class="questions__block">
+        <form method="post" onsubmit="return false" class="questions__block" id="feedback">
             <h2>have any questions?</h2>
             <div class="feedback__data">
                 <fieldset>
@@ -380,6 +380,31 @@
             <li><a href="#!" class="social__item">Yt</a></li>
         </ul>
     </section>
+
+    <!-- Модальное окно -->
+    <div class="modal _hidden" id="modal">
+        <div class="modal__background" id="modal__background">
+            <form method="post" class="modal__feedback" id="modal__feedback" onsubmit="return false">
+            <h3>Reserve a table</h3>
+            <fieldset>
+                <label for="modal__name">Name</label>
+                <br>
+                <input type="text" name="modal__name" id="modal__name" placeholder="Input your name" class="name__field" required>
+
+                <label for="modal__phone">Phone number</label>
+                <br>
+                <input type="tel" name="modal__phone" id="modal__phone" placeholder="Input your phone number" class="name__field" required>
+
+                <label for="mobile__special__request">Speciale Request</label>
+                <br>
+                <textarea name="mobile__special__request" id="mobile__special__request" placeholder="Input your special request"
+                    class="special__request"></textarea>
+                 <input type="submit" value="Reserve" class="send__btn">
+            </fieldset>
+            <div class="close" id="close"></div>
+            </form>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
