@@ -38,7 +38,7 @@ const swiper__foto = new Swiper(".swiper__foto", {
 let hamburgerClick = document.querySelector("#menu__btn");
 hamburgerClick.addEventListener("click", scrollBlock);
 function scrollBlock() {
-  document.body.classList.toggle("noscrolling");
+  document.body.classList.toggle("noscrolling__mobile");
 }
 
 // Закрываем гамбургер при нажатии на пункт меню
@@ -49,7 +49,7 @@ for (let i = 0; i < menuBox.length; i++) {
 function menuClose(click) {
   let menuTouggle = document.querySelector("#menu__toggle");
   menuTouggle.checked = false;
-  document.body.classList.toggle("noscrolling");
+  document.body.classList.toggle("noscrolling__mobile");
 }
 
 let modal = document.querySelector("#modal");
@@ -70,7 +70,14 @@ function closeModal(event) {
   }
 }
 
+function modalSend(){
+  let modalSendBtn = document.querySelector('#modal__send__btn');
+  modalSendBtn.value = 'Reservering verzonden';
+  setTimeout(closeModalBySubmit, 2000);
+}
+
 function closeModalBySubmit(){
+  document.body.classList.toggle("noscrolling");
   modal.classList.toggle("_hidden");
 }
 
@@ -84,7 +91,6 @@ $("document").ready(function () {
       dataType: "html",
       data: dataForm,
       success: function (data) {
-        console.log(data);
       },
     });
   });
@@ -100,9 +106,8 @@ $("document").ready(function () {
       dataType: "html",
       data: dataForm,
       success: function (data) {
-        console.log(data);
-        closeModalBySubmit();
       },
     });
+    modalSend();
   });
 });
