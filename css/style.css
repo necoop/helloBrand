@@ -8,6 +8,10 @@ body {
   color: #fff;
 }
 
+.noscrolling {
+  overflow-y: hidden;
+}
+
 ._container {
   margin: 0 auto;
   max-width: 1200px;
@@ -417,7 +421,7 @@ h1 {
   .dishes__text .day__of__week {
     font-size: 18px;
     line-height: 27px;
-    margin-top: 8px;
+    margin-top: 9px;
   }
   .dishes__text span {
     font-size: 12px;

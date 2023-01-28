@@ -4,8 +4,10 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  // background: #212742;
   color: #fff;
+}
+.noscrolling{
+  overflow-y: hidden;
 }
 ._container {
   margin: 0 auto;
@@ -51,7 +53,6 @@ body {
 }
 
 /* Гамбургер*/
-
 .hamburger__menu {
   display: none;
   z-index: 1000;
@@ -391,7 +392,7 @@ h1 {
   .dishes__text .day__of__week {
     font-size: 18px;
     line-height: 27px;
-    margin-top: 8px;
+    margin-top: 9px;
   }
   .dishes__text span {
     font-size: 12px;
