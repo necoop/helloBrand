@@ -809,6 +809,7 @@ h2 {
   height: 80px;
   padding: 0 16px;
   width: 100%;
+  transition: all 0.3s ease;
 }
 .name__field:hover, .name__field:focus {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -826,6 +827,7 @@ h2 {
   padding: 28px 16px;
   width: 100%;
   resize: none;
+  transition: all 0.3s ease;
 }
 .special__request:hover, .special__request:focus {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
