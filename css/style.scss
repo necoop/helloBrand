@@ -18,6 +18,24 @@ body {
   max-width: 1200px;
   padding: 0 15px;
 }
+.main__ibg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+._ibg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+// Меню навигации
 .nav__list {
   max-width: 424px;
   display: flex;
@@ -54,6 +72,37 @@ body {
 .main {
   position: relative;
   padding-top: 55px;
+}
+.desktop__menu {
+  .nav__item{
+    a {
+      position: relative;
+      color: white;
+      transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+  
+      &::after {
+        --scale: 0;
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        height: 2px;
+        background: linear-gradient(135deg, rgb(255, 255, 255), rgb(58, 69, 116));
+        transform: scaleX(var(--scale));
+        transform-origin: var(--x) 50%;
+        transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
+      }
+  
+      &:hover {
+        opacity: 1;
+      }
+  
+      &:hover::after {
+        --scale: 1;
+      }
+    }
+  }
 }
 
 /* Гамбургер*/
@@ -149,25 +198,7 @@ body {
 }
 /* Гамбургер окончание */
 
-// .nav__menu{
-//   position: relative;
-// }
-.main__ibg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-._ibg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
+// Секция main
 .main__block {
   margin-top: 154px;
   padding-bottom: 265px;
@@ -288,6 +319,7 @@ h1 {
   }
 }
 
+// Секция dishes
 .dishes {
   display: flex;
   justify-content: space-between;
@@ -444,6 +476,7 @@ h1 {
   }
 }
 
+// Секция reviews
 .reviews {
   margin-top: 90px;
   background: #3a4574;
@@ -536,6 +569,7 @@ h1 {
   }
 }
 
+// Секция food
 .food {
   margin-top: 51px;
   color: #000000;
@@ -631,6 +665,7 @@ h2 {
   }
 }
 
+// Секция foto
 .foto {
   margin-top: 80px;
   // background: #3a4574;
@@ -704,7 +739,6 @@ h2 {
 }
 
 // SECTION CONTACTS
-
 .contacts {
   margin-top: 101px;
   color: #000;
@@ -885,10 +919,10 @@ h2 {
   }
 }
 
+// Модальное окно
 ._hidden {
   display: none;
 }
-
 .modal {
   position: relative;
 }
@@ -968,34 +1002,4 @@ h2 {
   transform: rotate(-45deg);
 }
 
-.desktop__menu {
-  .nav__item{
-    a {
-      position: relative;
-      color: white;
-      transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
-  
-      &::after {
-        --scale: 0;
-        content: "";
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 100%;
-        height: 2px;
-        background: linear-gradient(135deg, rgb(255, 255, 255), rgb(58, 69, 116));
-        transform: scaleX(var(--scale));
-        transform-origin: var(--x) 50%;
-        transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
-      }
-  
-      &:hover {
-        opacity: 1;
-      }
-  
-      &:hover::after {
-        --scale: 1;
-      }
-    }
-  }
-}
+

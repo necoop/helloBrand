@@ -70,38 +70,31 @@ function closeModal(event) {
   }
 }
 
-function modalSend(){
-  let modalSendBtn = document.querySelector('#modal__send__btn');
-  modalSendBtn.value = 'Reservering verzonden';
+function modalSend() {
+  let modalSendBtn = document.querySelector("#modal__send__btn");
+  modalSendBtn.value = "Reservering verzonden";
   setTimeout(closeModalBySubmit, 2000);
 }
 
-function closeModalBySubmit(){
+function closeModalBySubmit() {
   document.body.classList.toggle("noscrolling");
   modal.classList.toggle("_hidden");
 }
 
 // Ховер меню навигации
-document.querySelectorAll('.nav__descktop__item').forEach((elem) => {
+document.querySelectorAll(".nav__descktop__item").forEach((elem) => {
+  elem.onmouseenter = elem.onmouseleave = (e) => {
+    const tolerance = 10;
+    const left = 0;
+    const right = elem.clientWidth;
+    let x = e.pageX - elem.offsetLeft;
+    if (x - tolerance < left) x = left;
+    if (x + tolerance > right) x = right;
+    elem.style.setProperty("--x", `${x}px`);
+  };
+});
 
-	elem.onmouseenter =
-	elem.onmouseleave = (e) => {
 
-		const tolerance = 10
-
-		const left = 0
-		const right = elem.clientWidth
-
-		let x = e.pageX - elem.offsetLeft
-
-		if (x - tolerance < left) x = left
-		if (x + tolerance > right) x = right
-
-		elem.style.setProperty('--x', `${ x }px`)
-
-	}
-
-})
 
 // Отправка формы
 $("document").ready(function () {
@@ -112,8 +105,7 @@ $("document").ready(function () {
       method: "post",
       dataType: "html",
       data: dataForm,
-      success: function (data) {
-      },
+      success: function (data) {},
     });
   });
 });
@@ -127,8 +119,7 @@ $("document").ready(function () {
       method: "post",
       dataType: "html",
       data: dataForm,
-      success: function (data) {
-      },
+      success: function (data) {},
     });
     modalSend();
   });
