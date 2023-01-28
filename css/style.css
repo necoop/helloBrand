@@ -985,12 +985,12 @@ h2 {
   transform: rotate(-45deg);
 }
 
-.desktop__menu a {
+.desktop__menu .nav__item a {
   position: relative;
   color: white;
   transition: opacity 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 }
-.desktop__menu a::after {
+.desktop__menu .nav__item a::after {
   --scale: 0;
   content: "";
   position: absolute;
@@ -1003,9 +1003,9 @@ h2 {
   transform-origin: var(--x) 50%;
   transition: transform 0.3s cubic-bezier(0.51, 0.92, 0.24, 1);
 }
-.desktop__menu a:hover {
+.desktop__menu .nav__item a:hover {
   opacity: 1;
 }
-.desktop__menu a:hover::after {
+.desktop__menu .nav__item a:hover::after {
   --scale: 1;
 }/*# sourceMappingURL=style.css.map */
