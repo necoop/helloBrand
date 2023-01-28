@@ -263,9 +263,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  a {
-    color: #fff;
-  }
+  color: #fff;
 }
 @media (max-width: 581px) {
   .reserve {
@@ -413,7 +411,7 @@ h1 {
     height: 478px;
   }
   .dishes {
-    margin-top: 30px;
+    margin-top: 27px;
   }
 }
 @media (max-width: 332px) {
@@ -496,7 +494,7 @@ h1 {
 
 @media (max-width: 488px) {
   .reviews {
-    margin-top: 4px;
+    margin-top: 2px;
     padding-top: 110px;
     padding-bottom: 110px;
   }
@@ -526,7 +524,7 @@ h1 {
 }
 
 .food {
-  margin-top: 52px;
+  margin-top: 51px;
   color: #000000;
 }
 h2 {
@@ -665,7 +663,7 @@ h2 {
 
 @media (max-width: 684px) {
   .foto {
-    margin-top: 3px;
+    margin-top: 2px;
   }
 }
 
@@ -834,16 +832,18 @@ h2 {
   max-width: 267px;
   justify-content: space-between;
 }
-.social__item {
-  width: 48px;
-  height: 48px;
-  border: 1px solid #000000;
-  color: #000;
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  font-feature-settings: "pnum" on, "lnum" on;
+.footer{
+  .social__item {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #000000;
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+  }
 }
 .footer__logo{
   width: 100%;

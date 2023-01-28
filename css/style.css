@@ -283,8 +283,6 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.social__item a {
   color: #fff;
 }
 
@@ -439,7 +437,7 @@ h1 {
     height: 478px;
   }
   .dishes {
-    margin-top: 30px;
+    margin-top: 27px;
   }
 }
 @media (max-width: 332px) {
@@ -529,7 +527,7 @@ h1 {
 }
 @media (max-width: 488px) {
   .reviews {
-    margin-top: 4px;
+    margin-top: 2px;
     padding-top: 110px;
     padding-bottom: 110px;
   }
@@ -556,7 +554,7 @@ h1 {
   }
 }
 .food {
-  margin-top: 52px;
+  margin-top: 51px;
   color: #000000;
 }
 
@@ -696,7 +694,7 @@ h2 {
 
 @media (max-width: 684px) {
   .foto {
-    margin-top: 3px;
+    margin-top: 2px;
   }
 }
 @media (max-width: 655px) {
@@ -875,7 +873,7 @@ h2 {
   justify-content: space-between;
 }
 
-.social__item {
+.footer .social__item {
   width: 48px;
   height: 48px;
   border: 1px solid #000000;
